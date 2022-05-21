@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import styles from './Specialization.module.css';
 import { GetSpecializations } from '../../store/specializations/specializations';
 
@@ -37,7 +38,7 @@ const Specialization = () => {
                     : `bg-light_purple_color ${styles.oddBlock}`
                 }`}
               >
-                {specialization.name}
+                <Link to={`${specialization.id}`}>{specialization.name}</Link>
               </div>
             </div>
           ))}
